@@ -6,9 +6,10 @@ const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
 // Function stubs for DOMContentLoaded handler
 function initNavbarScroll() {
   const navbar = document.getElementById('navbar');
+  if (!navbar) return;
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 50);
-  });
+  }, { passive: true });
 }
 
 function initSmoothScroll() {

@@ -46,28 +46,28 @@ landing-page/
 ### 2. Hero
 - Badge animado: `● Disponível para novos projetos`
 - Título: "Olá, sou **Rafaela Santos**" — nome em azul cobalto
-- Subtítulo: "Full Stack Developer"
+- Subtítulo: "Web Developer — practical web apps & AI integrations for small businesses"
 - Descrição curta (2 linhas)
 - Dois botões: "Ver meus projetos" (primário sólido — ancora para seção Serviços) e "Entrar em contato →" (outline — ancora para seção Contato)
 - Glow radial decorativo no canto superior direito
-- 3 estatísticas separadas por linha: `3+ anos · 20+ projetos · 100% Job Success`
+- 3 estatísticas separadas por linha: `5+ projects · Full Stack · Available now`
 - Gradiente de fundo: `#070b14` → `#0d1a38`
 
 ### 3. Serviços
 - Label: `// o que eu faço`
 - Grid 2×2 com 4 cards:
-  1. **Frontend com React** — React, Next.js, TypeScript
-  2. **Backend & APIs** — Node.js, Python, FastAPI
-  3. **Banco de Dados** — PostgreSQL, MongoDB, Redis
-  4. **Deploy & DevOps** — Docker, Vercel, AWS
+  1. **Frontend com React** — React, Next.js
+  2. **Backend & APIs** — Node.js, Python
+  3. **Banco de Dados** — PostgreSQL, MongoDB
+  4. **Deploy & DevOps** — Vercel, Railway
 - Cada card: ícone emoji, título, descrição, tags de tecnologia
 - Hover: border-color muda para azul cobalto com transição suave
 
 ### 4. Sobre
 - Label: `// quem sou eu`
 - Layout horizontal: avatar (emoji 👩‍💻 em círculo com borda azul) + texto
-- Texto: apresentação pessoal, foco em trabalho remoto e entrega de qualidade
-- Pills de habilidades: React, Node.js, Python, TypeScript, PostgreSQL, Docker
+- Texto: apresentação pessoal com foco em ajudar pequenos negócios a resolver problemas reais com web apps práticos e integrações de IA — trabalho remoto, código limpo e entrega no prazo
+- Pills de habilidades: React, Node.js, Python, PostgreSQL, Vercel, AI Integrations
 
 ### 5. Depoimentos
 - Label: `// o que dizem`

@@ -161,6 +161,53 @@
       </div>
     </div>
   </section>
+  <section id="contact" class="contact">
+    <div class="container">
+      <span class="section-label">// vamos trabalhar juntos</span>
+      <h2 class="section-title">Contato</h2>
+      <div class="contact__inner">
+
+        <div class="contact__info animate-on-scroll">
+          <h3 class="contact__heading">Tem um projeto em mente?</h3>
+          <p class="contact__text">Estou disponível para projetos freelance remotos. Me manda uma mensagem e respondo em até 24h.</p>
+          <ul class="contact__links">
+            <li>
+              <span class="contact__link-icon">✉</span>
+              <a href="mailto:rafaelasantosfeitosa@gmail.com">rafaelasantosfeitosa@gmail.com</a>
+            </li>
+            <li>
+              <span class="contact__link-icon">in</span>
+              <a href="https://linkedin.com/in/rafaela-santos" target="_blank" rel="noopener">linkedin.com/in/rafaela-santos</a>
+            </li>
+            <li>
+              <span class="contact__link-icon">↑</span>
+              <a href="https://upwork.com" target="_blank" rel="noopener">upwork.com/fl/rafaelasantos</a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact__form animate-on-scroll" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="from_name">Nome</label>
+            <input type="text" id="from_name" name="from_name" placeholder="Seu nome" required />
+          </div>
+          <div class="form-group">
+            <label for="from_email">Email</label>
+            <input type="email" id="from_email" name="from_email" placeholder="seu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" placeholder="Descreva seu projeto..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary contact__submit" id="submitBtn">
+            Enviar mensagem <span aria-hidden="true">→</span>
+          </button>
+          <p class="contact__feedback" id="formFeedback"></p>
+        </form>
+
+      </div>
+    </div>
+  </section>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="js/main.js"></script>
 </body>

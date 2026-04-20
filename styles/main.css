@@ -343,6 +343,10 @@ button { cursor: pointer; font-family: var(--font); }
   max-width: 580px;
 }
 
+.about__bio + .about__bio {
+  margin-top: 12px;
+}
+
 .about__skills {
   display: flex;
   flex-wrap: wrap;

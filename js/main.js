@@ -66,6 +66,14 @@ function initContactForm() {
     feedback.textContent = '';
     feedback.className = 'contact__feedback';
 
+    if (!form.from_name.value.trim() || !form.from_email.value.trim() || !form.message.value.trim()) {
+      feedback.textContent = 'Por favor, preencha todos os campos.';
+      feedback.classList.add('error');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Enviar mensagem \u2192';
+      return;
+    }
+
     try {
       await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
         from_name:  form.from_name.value,
@@ -86,7 +94,9 @@ function initContactForm() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  emailjs.init(EMAILJS_PUBLIC_KEY);
+  if (typeof emailjs !== 'undefined') {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+  }
   initNavbarScroll();
   initSmoothScroll();
   initHamburger();

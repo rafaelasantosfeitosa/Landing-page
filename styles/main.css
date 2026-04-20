@@ -644,3 +644,13 @@ button { cursor: pointer; font-family: var(--font); }
     text-align: center;
   }
 }
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

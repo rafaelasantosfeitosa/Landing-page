@@ -29,6 +29,7 @@
       </button>
     </div>
   </header>
+  <main>
   <section id="hero" class="hero">
     <div class="hero__glow" aria-hidden="true"></div>
     <div class="container">
@@ -111,7 +112,7 @@
       <span class="section-label">// quem sou eu</span>
       <h2 class="section-title">Sobre mim</h2>
       <div class="about__inner">
-        <div class="about__avatar" aria-label="Avatar">👩‍💻</div>
+        <div class="about__avatar" aria-label="Foto de Rafaela Santos">👩‍💻</div>
         <div class="about__content animate-on-scroll">
           <h3 class="about__name">Rafaela Santos</h3>
           <p class="about__bio">
@@ -143,7 +144,7 @@
           <div class="t-card__stars">★★★★★</div>
           <p class="t-card__text">"Rafaela delivered the project ahead of schedule with clean code and excellent communication throughout. She understood our needs immediately and suggested improvements I hadn't even considered. Will definitely hire again."</p>
           <div class="t-card__author">
-            <div class="t-card__avatar">🇺🇸</div>
+            <div class="t-card__avatar" aria-hidden="true">🇺🇸</div>
             <div>
               <div class="t-card__name">John Smith</div>
               <div class="t-card__role">CEO, TechStart — United States</div>
@@ -155,7 +156,7 @@
           <div class="t-card__stars">★★★★★</div>
           <p class="t-card__text">"Best developer I've hired on Upwork. She built our internal web tool with an AI integration that saved our team hours every week. Professional, fast and the code is actually readable."</p>
           <div class="t-card__author">
-            <div class="t-card__avatar">🇬🇧</div>
+            <div class="t-card__avatar" aria-hidden="true">🇬🇧</div>
             <div>
               <div class="t-card__name">Emma Clarke</div>
               <div class="t-card__role">Product Manager — United Kingdom</div>
@@ -207,12 +208,13 @@
           <button type="submit" class="btn btn--primary contact__submit" id="submitBtn">
             Enviar mensagem <span aria-hidden="true">→</span>
           </button>
-          <p class="contact__feedback" id="formFeedback"></p>
+          <p class="contact__feedback" id="formFeedback" aria-live="polite"></p>
         </form>
 
       </div>
     </div>
   </section>
+  </main>
   <footer class="footer">
     <div class="container footer__inner">
       <p class="footer__copy">© 2026 Rafaela Santos. Todos os direitos reservados.</p>

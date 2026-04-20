@@ -13,15 +13,43 @@ function initNavbarScroll() {
 }
 
 function initSmoothScroll() {
-  // To be implemented in subsequent tasks
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('navLinks').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
+    });
+  });
 }
 
 function initHamburger() {
-  // To be implemented in subsequent tasks
+  const btn   = document.getElementById('hamburger');
+  const links = document.getElementById('navLinks');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    const isOpen = btn.classList.toggle('open');
+    links.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(isOpen));
+  });
 }
 
 function initAnimations() {
-  // To be implemented in subsequent tasks
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 }
 
 function initContactForm() {

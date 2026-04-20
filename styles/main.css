@@ -529,3 +529,33 @@ button { cursor: pointer; font-family: var(--font); }
 
 .contact__feedback.success { color: #4ade80; }
 .contact__feedback.error   { color: #f87171; }
+
+/* ── Footer ── */
+.footer {
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copy {
+  font-size: 12px;
+  color: var(--faint);
+}
+
+.footer__links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer__links a {
+  font-size: 12px;
+  color: var(--faint);
+  transition: color var(--transition);
+}
+
+.footer__links a:hover { color: var(--accent); }

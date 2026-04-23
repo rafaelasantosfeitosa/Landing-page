@@ -93,6 +93,65 @@ function initContactForm() {
   });
 }
 
+function initCarousels() {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  document.querySelectorAll('[data-carousel]').forEach(carousel => {
+    const track  = carousel.querySelector('[data-carousel-track]');
+    const slides = Array.from(track.children);
+    const prev   = carousel.querySelector('[data-carousel-prev]');
+    const next   = carousel.querySelector('[data-carousel-next]');
+    const dotsEl = carousel.querySelector('[data-carousel-dots]');
+    if (!track || slides.length <= 1) return;
+
+    let index = 0;
+    let timer = null;
+
+    const dots = slides.map((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'carousel__dot';
+      dot.setAttribute('role', 'tab');
+      dot.setAttribute('aria-label', `Go to screenshot ${i + 1}`);
+      dot.addEventListener('click', () => goTo(i, true));
+      dotsEl.appendChild(dot);
+      return dot;
+    });
+
+    function render() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((d, i) => d.setAttribute('aria-selected', String(i === index)));
+    }
+
+    function goTo(i, userTriggered) {
+      index = (i + slides.length) % slides.length;
+      render();
+      if (userTriggered) restart();
+    }
+
+    function start() {
+      if (reduceMotion) return;
+      timer = setInterval(() => goTo(index + 1), 5000);
+    }
+
+    function stop() {
+      if (timer) { clearInterval(timer); timer = null; }
+    }
+
+    function restart() { stop(); start(); }
+
+    prev.addEventListener('click', () => goTo(index - 1, true));
+    next.addEventListener('click', () => goTo(index + 1, true));
+    carousel.addEventListener('mouseenter', stop);
+    carousel.addEventListener('mouseleave', start);
+    carousel.addEventListener('focusin', stop);
+    carousel.addEventListener('focusout', start);
+
+    render();
+    start();
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   if (typeof emailjs !== 'undefined') {
     emailjs.init(EMAILJS_PUBLIC_KEY);
@@ -102,4 +161,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initHamburger();
   initAnimations();
   initContactForm();
+  initCarousels();
 });

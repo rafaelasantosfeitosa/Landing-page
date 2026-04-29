@@ -1,4 +1,4 @@
-// EmailJS credentials — replace with your own values
+// EmailJS credentials. Replace with your own values.
 const EMAILJS_PUBLIC_KEY  = '8HNbOBPx8jyL-1iih';
 const EMAILJS_SERVICE_ID  = 'service_mpkpfy4';
 const EMAILJS_TEMPLATE_ID = 'template_25l6zfo';
@@ -61,16 +61,16 @@ function initContactForm() {
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    submitBtn.textContent = 'Enviando...';
+    submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
     feedback.textContent = '';
     feedback.className = 'contact__feedback';
 
     if (!form.from_name.value.trim() || !form.from_email.value.trim() || !form.message.value.trim()) {
-      feedback.textContent = 'Por favor, preencha todos os campos.';
+      feedback.textContent = 'Please fill in all fields.';
       feedback.classList.add('error');
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Enviar mensagem \u2192';
+      submitBtn.textContent = 'Send message \u2192';
       return;
     }
 
@@ -80,17 +80,22 @@ function initContactForm() {
         from_email: form.from_email.value,
         message:    form.message.value,
       });
-      feedback.textContent = '✓ Mensagem enviada! Responderei em até 24h.';
+      feedback.textContent = '✓ Message sent! I will reply within 24 hours.';
       feedback.classList.add('success');
       form.reset();
     } catch {
-      feedback.textContent = '✗ Erro ao enviar. Tente pelo email diretamente.';
+      feedback.textContent = '✗ Could not send. Please email me directly.';
       feedback.classList.add('error');
     } finally {
-      submitBtn.textContent = 'Enviar mensagem →';
+      submitBtn.textContent = 'Send message →';
       submitBtn.disabled = false;
     }
   });
+}
+
+function initFooterYear() {
+  const el = document.getElementById('footerYear');
+  if (el) el.textContent = String(new Date().getFullYear());
 }
 
 function initCarousels() {
@@ -131,7 +136,7 @@ function initCarousels() {
 
     function start() {
       if (reduceMotion) return;
-      timer = setInterval(() => goTo(index + 1), 5000);
+      timer = setInterval(() => goTo(index + 1), 8000);
     }
 
     function stop() {
@@ -162,4 +167,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initAnimations();
   initContactForm();
   initCarousels();
+  initFooterYear();
 });

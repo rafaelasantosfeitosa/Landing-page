@@ -1,6 +1,6 @@
-# Rafaela Santos — Landing Page
+# Rafaela Santos | Landing Page
 
-Personal landing page for Rafaela Santos — Web Developer. Hand-coded in HTML, CSS and vanilla JavaScript — no framework, no build step.
+Personal landing page for Rafaela Santos, Web Developer. Hand-coded in HTML, CSS and vanilla JavaScript. No framework, no build step.
 
 🔗 **[Live site](https://rafaelasantosfeitosa.github.io/Landing-page/)**
 
@@ -10,14 +10,14 @@ Personal landing page for Rafaela Santos — Web Developer. Hand-coded in HTML, 
 
 ## Features
 
-- **Responsive design** — fluid layout optimized for mobile, tablet and desktop
+- **Responsive design**: fluid layout optimized for mobile, tablet and desktop
 - **Dark theme** with an accent-blue palette defined through CSS custom properties
 - **Smooth scroll** between sections and a navbar with dynamic blur on scroll
 - **Accessible hamburger menu** on smaller screens
 - **Performant on-scroll animations** using `IntersectionObserver` (no animation libraries)
 - **Working contact form** integrated with EmailJS, including client-side validation and `aria-live` feedback
-- **Accessibility** — `aria-expanded`, `aria-controls`, `aria-live`, `aria-hidden` on decorative elements
-- **SEO ready** — meta description, Open Graph and Twitter Card tags for social sharing
+- **Accessibility**: `aria-expanded`, `aria-controls`, `aria-live`, `aria-hidden` on decorative elements
+- **SEO ready**: meta description, Open Graph and Twitter Card tags for social sharing
 
 ---
 
@@ -68,16 +68,16 @@ const EMAILJS_TEMPLATE_ID = '...';
 
 ## Technical decisions
 
-- **Vanilla JS over a framework** — the site is static and doesn't need state management, routing or a virtual DOM. Skipping a framework cuts ~150KB of JavaScript, removes the build step, and keeps the code readable by any developer at any level.
-- **CSS custom properties for theming** — the entire palette (`--bg`, `--accent`, `--text`, `--border`, etc.) lives in `:root`. Changing the whole theme is a matter of tweaking a few lines, no hex-code hunting across the CSS.
-- **Accessibility from the start** — `aria-expanded` synced on the hamburger, `aria-live="polite"` on form feedback, `aria-hidden` on decorative icons, and labels associated with every input. Accessibility isn't a feature added later — it's part of the markup.
-- **Defensive EmailJS loading** — init checks `typeof emailjs !== 'undefined'` in case the CDN fails to load, and the submit handler falls back to an error message directing the user to email directly.
+- **Vanilla JS over a framework**: the site is static and doesn't need state management, routing or a virtual DOM. Skipping a framework cuts ~150KB of JavaScript, removes the build step, and keeps the code readable by any developer at any level.
+- **CSS custom properties for theming**: the entire palette (`--bg`, `--accent`, `--text`, `--border`, etc.) lives in `:root`. Changing the whole theme is a matter of tweaking a few lines, no hex-code hunting across the CSS.
+- **Accessibility from the start**: `aria-expanded` synced on the hamburger, `aria-live="polite"` on form feedback, `aria-hidden` on decorative icons, and labels associated with every input. Accessibility isn't a feature added later, it's part of the markup.
+- **Defensive EmailJS loading**: init checks `typeof emailjs !== 'undefined'` in case the CDN fails to load, and the submit handler falls back to an error message directing the user to email directly.
 
 ---
 
 ## Author
 
-**Rafaela Santos** — Freelance Web Developer, available for remote work worldwide.
+**Rafaela Santos**, Freelance Web Developer, available for remote work worldwide.
 
 - Email: [rafaelasantosfeitosa@gmail.com](mailto:rafaelasantosfeitosa@gmail.com)
 - GitHub: [@rafaelasantosfeitosa](https://github.com/rafaelasantosfeitosa)

@@ -255,6 +255,98 @@ button { cursor: pointer; font-family: var(--font); }
   padding: 96px 0;
 }
 
+/* ── Tech marquee ── */
+.tech-marquee {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  padding: 18px 0;
+  position: relative;
+}
+
+.tech-marquee::before,
+.tech-marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.tech-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg2), transparent);
+}
+
+.tech-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg2), transparent);
+}
+
+.tech-marquee__track {
+  display: flex;
+  gap: 44px;
+  width: max-content;
+  animation: tech-marquee 40s linear infinite;
+}
+
+.tech-chip {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+
+@keyframes tech-marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── Process ── */
+.process-steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.process-step {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: border-color var(--transition);
+}
+
+.process-step:hover {
+  border-color: var(--accent-border);
+}
+
+.process-step__num {
+  font-family: var(--font-mono);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.process-step__title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.process-step__desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 /* ── Services ── */
 .services-grid {
   display: grid;
@@ -848,8 +940,14 @@ button { cursor: pointer; font-family: var(--font); }
   /* Services */
   .services-grid { grid-template-columns: 1fr; }
 
+  /* Process */
+  .process-steps { grid-template-columns: 1fr; }
+
   /* Projects */
   .projects-grid { grid-template-columns: 1fr; }
+
+  /* Testimonials */
+  .testimonials-grid { grid-template-columns: 1fr; }
 
   /* About */
   .about__inner {
@@ -882,4 +980,5 @@ button { cursor: pointer; font-family: var(--font); }
     transform: none;
     transition: none;
   }
+  .tech-marquee__track { animation: none; }
 }

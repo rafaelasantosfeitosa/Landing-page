@@ -730,7 +730,10 @@ button { cursor: pointer; font-family: var(--font); }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--accent);
   flex-shrink: 0;
 }
 
@@ -792,6 +795,17 @@ button { cursor: pointer; font-family: var(--font); }
   width: 18px;
   text-align: center;
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__link-icon--whatsapp {
+  color: #25d366;
+}
+
+.contact__link-icon--linkedin {
+  color: #0a66c2;
 }
 
 .contact__links a:hover { color: var(--text); }

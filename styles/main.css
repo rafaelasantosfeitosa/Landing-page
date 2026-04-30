@@ -930,6 +930,12 @@ button { cursor: pointer; font-family: var(--font); }
   resize: vertical;
 }
 
+.form-group.form-group--message textarea {
+  flex: 1;
+  height: auto;
+  min-height: 140px;
+}
+
 .contact__submit {
   width: 100%;
   padding: 13px;

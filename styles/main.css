@@ -455,7 +455,7 @@ button { cursor: pointer; font-family: var(--font); }
 
 .project-card__preview--carousel {
   padding: 0;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 64 / 30;
   background: linear-gradient(135deg, #1e3a8a 0%, #6d28d9 100%);
 }
 

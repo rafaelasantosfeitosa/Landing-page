@@ -17,6 +17,39 @@
   <meta name="twitter:description" content="Practical web apps &amp; AI integrations for small businesses." />
   <meta name="twitter:image" content="https://rafaelasantosfeitosa.github.io/Landing-page/docs/og-image.png" />
   <link rel="stylesheet" href="styles/main.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rafaela Santos",
+    "jobTitle": "Full Stack Web Developer",
+    "description": "Full stack web developer specialized in RAG, AI agents and chatbots for SMBs.",
+    "url": "https://rafaelasantosfeitosa.github.io/Landing-page/",
+    "image": "https://rafaelasantosfeitosa.github.io/Landing-page/docs/og-image.png",
+    "email": "mailto:rafaelasantosfeitosa@gmail.com",
+    "sameAs": [
+      "https://github.com/rafaelasantosfeitosa",
+      "https://www.linkedin.com/in/rafaela-santos-62853487/"
+    ],
+    "knowsAbout": [
+      "React", "Next.js", "Node.js", "Python", "PostgreSQL",
+      "Claude API", "OpenAI", "RAG", "pgvector", "LangChain", "AI Agents", "Chatbots"
+    ],
+    "knowsLanguage": ["en", "pt"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Rafaela Santos — Web Development",
+    "description": "Production AI features for small businesses: document Q&A, custom chatbots, retrieval-augmented generation, full stack web apps.",
+    "url": "https://rafaelasantosfeitosa.github.io/Landing-page/",
+    "areaServed": "Worldwide",
+    "serviceType": ["Web Development", "AI Integration", "RAG", "Chatbot Development"],
+    "provider": { "@type": "Person", "name": "Rafaela Santos" }
+  }
+  </script>
 </head>
 <body>
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
@@ -25,6 +58,7 @@
       <a href="#hero" class="navbar__logo">&lt;rafaela.dev /&gt;</a>
       <nav class="navbar__links" id="navLinks">
         <a href="#services">Services</a>
+        <a href="#packages">Pricing</a>
         <a href="#process">Process</a>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
@@ -45,10 +79,11 @@
     <div class="container">
       <span class="hero__badge"><span aria-hidden="true">●</span> Available for new projects</span>
       <h1 class="hero__title">Hi, I'm <span class="accent">Rafaela Santos</span></h1>
-      <p class="hero__subtitle">Full Stack Web Developer | AI integrations for small businesses</p>
-      <p class="hero__desc">I turn ideas into working products. Web apps, AI features and automations: designed, built and shipped. Remote, on time, well documented.</p>
+      <p class="hero__subtitle">RAG, AI agents &amp; chatbots for SMBs &mdash; production-ready in 2-4 weeks</p>
+      <p class="hero__desc">Full stack developer specialized in shipping practical AI features: document Q&amp;A, custom chatbots, retrieval-augmented generation. From database to interface, remote, on time, well documented.</p>
       <div class="hero__btns">
         <a href="#contact" class="btn btn--primary">Start a project <span aria-hidden="true">→</span></a>
+        <a href="https://calendly.com/REPLACE_ME/15min" target="_blank" rel="noopener" class="btn btn--outline" id="bookCallBtn">Book a 15min call</a>
         <a href="#projects" class="btn btn--outline">View work</a>
       </div>
       <div class="hero__stats">
@@ -67,6 +102,27 @@
       </div>
     </div>
   </section>
+  <!--
+    INTRO VIDEO: uncomment after recording your 60s Loom intro.
+    Replace REPLACE_LOOM_ID with the ID from your Loom share URL
+    (loom.com/share/<ID> -> use <ID> in the embed src below).
+  <section class="intro-video" aria-label="60 second intro">
+    <div class="container">
+      <div class="intro-video__inner">
+        <div class="intro-video__frame">
+          <iframe
+            src="https://www.loom.com/embed/REPLACE_LOOM_ID"
+            title="Rafaela Santos — 60 second intro"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"></iframe>
+        </div>
+        <p class="intro-video__caption">60 second intro — what I build, how I work, why hire me</p>
+      </div>
+    </div>
+  </section>
+  -->
+
   <div class="tech-marquee" aria-hidden="true">
     <div class="tech-marquee__track">
       <span class="tech-chip">React</span>
@@ -78,6 +134,10 @@
       <span class="tech-chip">MongoDB</span>
       <span class="tech-chip">Claude API</span>
       <span class="tech-chip">OpenAI</span>
+      <span class="tech-chip">LangChain</span>
+      <span class="tech-chip">pgvector</span>
+      <span class="tech-chip">Embeddings</span>
+      <span class="tech-chip">RAG</span>
       <span class="tech-chip">Vercel</span>
       <span class="tech-chip">Railway</span>
       <span class="tech-chip">Tailwind</span>
@@ -90,6 +150,10 @@
       <span class="tech-chip">MongoDB</span>
       <span class="tech-chip">Claude API</span>
       <span class="tech-chip">OpenAI</span>
+      <span class="tech-chip">LangChain</span>
+      <span class="tech-chip">pgvector</span>
+      <span class="tech-chip">Embeddings</span>
+      <span class="tech-chip">RAG</span>
       <span class="tech-chip">Vercel</span>
       <span class="tech-chip">Railway</span>
       <span class="tech-chip">Tailwind</span>
@@ -124,11 +188,14 @@
 
         <div class="service-card animate-on-scroll">
           <div class="service-card__icon" aria-hidden="true">🤖</div>
-          <h3 class="service-card__title">AI Integrations</h3>
-          <p class="service-card__desc">Practical AI features your business actually needs, like chatbots and content generation, powered by the Claude and OpenAI APIs.</p>
+          <h3 class="service-card__title">AI Agents, RAG &amp; Chatbots</h3>
+          <p class="service-card__desc">Production AI features that ship: document Q&amp;A with citations, custom support chatbots, retrieval-augmented generation over your data. Streaming answers, vector search, guardrails. Powered by Claude, OpenAI and Gemini.</p>
           <div class="service-card__tags">
             <span class="tag">Claude API</span>
             <span class="tag">OpenAI</span>
+            <span class="tag">RAG</span>
+            <span class="tag">pgvector</span>
+            <span class="tag">LangChain</span>
           </div>
         </div>
 
@@ -163,6 +230,60 @@
         </div>
 
       </div>
+    </div>
+  </section>
+  <section id="packages" class="section">
+    <div class="container">
+      <span class="section-label">// pricing</span>
+      <h2 class="section-title">Packages</h2>
+      <p class="section-sub">Fixed-scope starting points. Custom quotes after a quick discovery call.</p>
+      <div class="packages-grid">
+
+        <div class="package-card animate-on-scroll">
+          <div class="package-card__name">Landing Page</div>
+          <div class="package-card__price">from $499<span class="package-card__price-note">USD</span></div>
+          <p class="package-card__desc">High-converting one-pager. Ready in 5-7 days.</p>
+          <ul class="package-card__features">
+            <li>Custom responsive design</li>
+            <li>Working contact form</li>
+            <li>SEO &amp; performance optimized</li>
+            <li>Deploy &amp; custom domain</li>
+            <li>2 weeks of free support</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline btn--sm package-card__cta">Get started</a>
+        </div>
+
+        <div class="package-card package-card--featured animate-on-scroll">
+          <span class="package-card__badge">Most popular</span>
+          <div class="package-card__name">AI Chatbot / RAG</div>
+          <div class="package-card__price">from $1,499<span class="package-card__price-note">USD</span></div>
+          <p class="package-card__desc">Document Q&amp;A or custom support bot grounded on your data. 2-3 weeks.</p>
+          <ul class="package-card__features">
+            <li>RAG over your docs (PDF, web, DB)</li>
+            <li>Streaming answers with citations</li>
+            <li>Embeddable widget or web app</li>
+            <li>Auth + usage limits</li>
+            <li>Deploy + handover docs</li>
+          </ul>
+          <a href="#contact" class="btn btn--primary btn--sm package-card__cta">Start a project</a>
+        </div>
+
+        <div class="package-card animate-on-scroll">
+          <div class="package-card__name">Custom Web App</div>
+          <div class="package-card__price">from $2,999<span class="package-card__price-note">USD</span></div>
+          <p class="package-card__desc">Full stack SaaS or internal tool. Scoped per project, 3-6 weeks.</p>
+          <ul class="package-card__features">
+            <li>Frontend + API + database</li>
+            <li>Auth, payments, admin panel</li>
+            <li>AI features when needed</li>
+            <li>Production deploy</li>
+            <li>30 days of free support</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline btn--sm package-card__cta">Get a quote</a>
+        </div>
+
+      </div>
+      <p class="packages-note">Prices are starting points in USD. Final quote is fixed after scope alignment &mdash; no hidden fees, Upwork escrow friendly.</p>
     </div>
   </section>
   <section id="process" class="section">
@@ -440,6 +561,19 @@
             <span class="skill-pill">Vercel</span>
             <span class="skill-pill">AI Integrations</span>
           </div>
+          <p class="about__industries-label">Industries I serve</p>
+          <div class="about__skills">
+            <span class="skill-pill">SaaS &amp; Startups</span>
+            <span class="skill-pill">E-commerce</span>
+            <span class="skill-pill">EdTech</span>
+            <span class="skill-pill">Professional services</span>
+            <span class="skill-pill">Agencies</span>
+          </div>
+          <p class="about__industries-label">Languages</p>
+          <div class="about__skills">
+            <span class="skill-pill">English &mdash; fluent</span>
+            <span class="skill-pill">Portuguese &mdash; native</span>
+          </div>
         </div>
       </div>
     </div>
@@ -487,7 +621,7 @@
         <div class="contact__info animate-on-scroll">
           <span class="availability-badge" role="status">
             <span class="availability-badge__dot" aria-hidden="true"></span>
-            Available for projects · May 2026
+            Available for projects · <span id="availabilityMonth">May 2026</span>
           </span>
           <h3 class="contact__heading">Got a project in mind?</h3>
           <p class="contact__text">I'm available for remote freelance work. Send me a message and I'll reply within 24 hours.</p>
@@ -526,6 +660,18 @@
               <span class="contact-card__body">
                 <span class="contact-card__label">WhatsApp</span>
                 <span class="contact-card__value">+55 83 99826 5469</span>
+              </span>
+            </a>
+
+            <a class="contact-card" href="https://www.upwork.com/freelancers/REPLACE_ME" target="_blank" rel="noopener" id="upworkCard">
+              <span class="contact-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.812 2.285 5.119 5.097 5.119 2.813 0 5.118-2.307 5.118-5.119v-1.193c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.62 1.109 2.928 0 5.319-2.394 5.319-5.341 0-2.927-2.39-5.317-5.317-5.317z"/>
+                </svg>
+              </span>
+              <span class="contact-card__body">
+                <span class="contact-card__label">Upwork</span>
+                <span class="contact-card__value">Hire me on Upwork</span>
               </span>
             </a>
 

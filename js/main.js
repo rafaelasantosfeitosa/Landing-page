@@ -118,6 +118,15 @@ function initFooterYear() {
   if (el) el.textContent = String(new Date().getFullYear());
 }
 
+function initAvailabilityMonth() {
+  const el = document.getElementById('availabilityMonth');
+  if (!el) return;
+  const months = ['January','February','March','April','May','June',
+                  'July','August','September','October','November','December'];
+  const now = new Date();
+  el.textContent = `${months[now.getMonth()]} ${now.getFullYear()}`;
+}
+
 function initCarousels() {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -189,4 +198,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initCarousels();
   initScrollProgress();
   initFooterYear();
+  initAvailabilityMonth();
 });

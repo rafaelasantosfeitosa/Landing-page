@@ -693,35 +693,6 @@ button { cursor: pointer; font-family: var(--font); }
   color: var(--muted);
 }
 
-/* ── Intro video ── */
-.intro-video {
-  padding: 40px 0 0;
-}
-.intro-video__inner {
-  max-width: 840px;
-  margin: 0 auto;
-}
-.intro-video__frame {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid var(--border);
-  background: var(--bg-card);
-}
-.intro-video__frame iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-.intro-video__caption {
-  text-align: center;
-  font-size: 13px;
-  color: var(--muted);
-  margin-top: 12px;
-}
-
 /* ── Packages ── */
 .packages-grid {
   display: grid;
@@ -765,16 +736,18 @@ button { cursor: pointer; font-family: var(--font); }
   font-size: 18px;
   font-weight: 600;
 }
-.package-card__price {
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--accent);
-}
-.package-card__price-note {
+.package-card__timeline {
+  display: inline-block;
   font-size: 12px;
-  color: var(--muted);
-  font-weight: 400;
-  margin-left: 4px;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-border);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  width: fit-content;
 }
 .package-card__desc {
   font-size: 14px;
